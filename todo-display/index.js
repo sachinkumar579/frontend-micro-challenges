@@ -1,4 +1,4 @@
-window.onload = () => {
+window.onload = function () {
   const todoItems = [
     "Javascript",
     "HTML",
@@ -17,7 +17,7 @@ window.onload = () => {
   // within a div. An event listener is attached to the button which
   // will remove the individual div from the main div
   for (let count in todoItems) {
-    let div = createDiv("div");
+    let div = createDiv();
     let txtNode = document.createTextNode(todoItems[count]);
     let button = createButton(div);
 
@@ -26,8 +26,8 @@ window.onload = () => {
     mainDiv.appendChild(div);
   }
 
-  function createDiv(divid) {
-    let div = document.createElement(divid);
+  function createDiv() {
+    let div = document.createElement("div");
     div.className = "inner-div-class";
     return div;
   }
