@@ -1,0 +1,22 @@
+.container-class {
+  margin: auto;
+  width: 50%;
+}
+.inner-div-class {
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.header {
+  text-align: center;
+  margin: auto;
+}
+
+.button {
+  background-color: #dfca92;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  float: right;
+}
