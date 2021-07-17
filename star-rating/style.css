@@ -1,13 +1,13 @@
 .yellow {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 60px;
   background-image: url("yellow.png");
   background-repeat: no-repeat;
   cursor: pointer;
 }
 .white {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 60px;
   background-image: url("white.png");
   background-repeat: no-repeat;
   cursor: pointer;
