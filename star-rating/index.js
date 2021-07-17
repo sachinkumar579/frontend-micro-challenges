@@ -23,12 +23,7 @@ window.onload = function () {
       if (event.type == "click") clicked = [];
 
       for (let element of div.children) {
-        toggleImages(
-          event,
-          element,
-          parseInt(element.id),
-          parseInt(activeElement.id)
-        );
+        toggleImages(event, element, parseInt(element.id), parseInt(activeElement.id));
       }
     }
   }
@@ -36,18 +31,15 @@ window.onload = function () {
   function toggleImages(event, element, elementId, activeElementId) {
     switch (event.type) {
       case "mouseover":
-        elementId <= activeElementId
-          ? (element.className = "yellow")
-          : (element.className = "white");
+        elementId <= activeElementId ? (element.className = "yellow") : (element.className = "white");
         break;
       case "mouseout":
-        clicked.includes(elementId)
-          ? (element.className = "yellow")
-          : (element.className = "white");
+        clicked.includes(elementId) ? (element.className = "yellow") : (element.className = "white");
         break;
       case "click":
         elementId <= activeElementId ? clicked.push(elementId) : null;
         break;
     }
   }
+  
 };
