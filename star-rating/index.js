@@ -1,6 +1,6 @@
 window.onload = function () {
     let clicked = []; // To store the button click state. This will be cleared on browser refresh
-    const starCount = 10; // Total stars to be displayed in the UI
+    const starCount = 5; // Total stars to be displayed in the UI
     const actions = ["mouseover", "mouseout", "click"];
   
     let div = document.getElementById("div");  //This will be the main container
