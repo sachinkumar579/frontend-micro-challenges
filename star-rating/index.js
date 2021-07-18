@@ -21,8 +21,7 @@ window.onload = function () {
         let elementId = parseInt(element.id);
         let activeElementId = parseInt(event.currentTarget.id);
         switch (event.type) {
-          case "mouseover":
-            elementId <= activeElementId ? (element.className = "yellow") : (element.className = "white");
+          case "mouseover": elementId <= activeElementId ? (element.className = "yellow") : (element.className = "white");
             break;
           case "mouseout": clicked.includes(elementId) ? (element.className = "yellow") : (element.className = "white");
             break;
