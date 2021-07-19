@@ -3,10 +3,10 @@ window.onload = function () {
   const starCount = 5; // Total stars to be displayed in the UI
   const actions = ["mouseover", "mouseout", "click"];
 
-  let div = document.getElementById("div"); //This will be the main container
+  const div = document.getElementById("div"); //This will be the main container
 
   for (let i = 1; i <= starCount; i++) {
-    let starDiv = document.createElement("div"); // Create 1 div for each star and add it to main div
+    const starDiv = document.createElement("div"); // Create 1 div for each star and add it to main div
     starDiv.id = i;
     starDiv.className = "white";
     actions.forEach((action) => {
