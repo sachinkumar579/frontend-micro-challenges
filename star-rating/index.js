@@ -16,10 +16,10 @@ window.onload = function () {
   }
 
   function updateState(event) {
-    const activeElementId = parseInt(event.currentTarget.id);
+    const activeElementId = Number(event.currentTarget.id);
     if (event.type == "click") clicked = [];
     for (let element of div.children) {
-      const elementId = parseInt(element.id);
+      const elementId = Number(element.id);
       switch (event.type) {
         case "mouseover":
           elementId <= activeElementId
