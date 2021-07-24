@@ -5,7 +5,7 @@ window.onload = function () {
   const div = document.getElementById("mainContainer"); //container for stars
   const emojiDiv = document.getElementById("emojiContainer"); //container for emojis
   const spanEmoji = document.createElement("span"); // to display one of the below emojis
-  const ratings = ["??", "??", "??", "??", "??"];
+  const ratings = ["😥", "😌", "😐", "😃", "😎"];
 
   // Create 1 div for each star and add it to main div
   // Add 3 listeners - mouseover,mouseout and click for each star
