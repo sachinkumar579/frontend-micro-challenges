@@ -3,6 +3,7 @@
   text-align: center;
 }
 
-.span {
+.emojiSpan,
+.starSpan {
   font-size: xx-large;
 }
