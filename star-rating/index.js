@@ -28,8 +28,7 @@ window.onload = function () {
 
     if (event.type == "click") {
       clicked = [];
-      spanEmoji.textContent =
-        ratings[Math.ceil((activeElementId * 5) / starCount - 1)];
+      spanEmoji.textContent = ratings[Math.ceil((activeElementId * 5) / starCount - 1)]; // rounds a number to next largest integer
     }
 
     for (let starElement of starContainer.children) {
