@@ -4,13 +4,14 @@ window.onload = function () {
   const actions = ["mouseover", "mouseout", "click"];
   const starContainer = document.getElementById("starContainer"); //container for stars
   const emojiContainer = document.getElementById("emojiContainer"); //container for emojis
-  const spanEmoji = document.createElement("span"); // to display one of the below emojis
+  const spanEmoji = document.getElementById("span"); // to display one of the below emojis
   const ratings = ["😥", "😌", "😐", "😃", "😎"];
 
   // Create 1 span for each star and add it to main div
   // Add 3 listeners - mouseover,mouseout and click for each star
   for (let i = 1; i <= starCount; i++) {
     const starSpan = document.createElement("span");
+    console.dir(starSpan);
     starSpan.id = i;
     starSpan.innerText = "☆";
     starSpan.style.color = "black";
@@ -25,12 +26,11 @@ window.onload = function () {
 
   function updateState(event) {
     const activeElementId = Number(event.currentTarget.id);
-    updateStars(event, activeElementId);
-    updateEmoji(event, activeElementId);
-  }
 
-  function updateStars(event, activeElementId) {
-    if (event.type == "click") clicked = [];
+    if (event.type == "click") {
+      clicked = [];
+      spanEmoji.innerText = ratings[activeElementId - 1];
+    }
 
     for (let starElement of starContainer.children) {
       const elementId = Number(starElement.id);
@@ -54,14 +54,6 @@ window.onload = function () {
       } else if (event.type == "click") {
         elementId <= activeElementId ? clicked.push(elementId) : null;
       }
-    }
-  }
-
-  function updateEmoji(event, activeElementId) {
-    if (event.type == "click") {
-      emojiContainer.removeChild(emojiContainer.firstChild);
-      spanEmoji.innerText = ratings[activeElementId - 1];
-      emojiContainer.appendChild(spanEmoji);
     }
   }
 };
