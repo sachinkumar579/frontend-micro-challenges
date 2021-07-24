@@ -15,6 +15,7 @@ window.onload = function () {
     starSpan.innerText = "☆";
     starSpan.style.color = "black";
     starSpan.style.cursor = "pointer";
+    starSpan.className = "span";
 
     actions.forEach((action) => {
       starSpan.addEventListener(action, updateState);
