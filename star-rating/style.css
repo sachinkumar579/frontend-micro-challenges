@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 
-#div {
+#mainContainer {
   text-align: center;
   margin: auto;
   display: inline-flex;
