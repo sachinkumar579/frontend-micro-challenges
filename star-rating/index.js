@@ -2,8 +2,8 @@ window.onload = function () {
   let clicked = []; // To store the button click state. This will be cleared on browser refresh
   const starCount = 5; // Total stars to be displayed in the UI
   const actions = ["mouseover", "mouseout", "click"];
-  const starContainer = document.getElementById("starContainer"); //container for stars
-  const emojiContainer = document.getElementById("emojiContainer"); //container for emojis
+  const starContainer = document.getElementById("starContainer"); 
+  const emojiContainer = document.getElementById("emojiContainer"); 
   const spanEmoji = document.getElementById("span"); // to display one of the below emojis
   const ratings = ["😥", "😌", "😐", "😃", "😎"];
 
