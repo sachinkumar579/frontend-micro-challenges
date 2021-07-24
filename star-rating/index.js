@@ -11,7 +11,6 @@ window.onload = function () {
   // Add 3 listeners - mouseover,mouseout and click for each star
   for (let i = 1; i <= starCount; i++) {
     const starSpan = document.createElement("span");
-    console.dir(starSpan);
     starSpan.id = i;
     starSpan.innerText = "☆";
     starSpan.style.color = "black";
