@@ -1,20 +1,8 @@
-.yellow {
-  height: 80px;
-  width: 60px;
-  background-image: url("yellow.png");
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-.white {
-  height: 80px;
-  width: 60px;
-  background-image: url("white.png");
-  background-repeat: no-repeat;
-  cursor: pointer;
+.container {
+  margin: auto;
+  text-align: center;
 }
 
-#mainContainer {
-  text-align: center;
-  margin: auto;
-  display: inline-flex;
+.span {
+  font-size: xx-large;
 }

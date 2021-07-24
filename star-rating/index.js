@@ -2,21 +2,26 @@ window.onload = function () {
   let clicked = []; // To store the button click state. This will be cleared on browser refresh
   const starCount = 5; // Total stars to be displayed in the UI
   const actions = ["mouseover", "mouseout", "click"];
-  const div = document.getElementById("mainContainer"); //container for stars
-  const emojiDiv = document.getElementById("emojiContainer"); //container for emojis
+  const starContainer = document.getElementById("starContainer"); //container for stars
+  const emojiContainer = document.getElementById("emojiContainer"); //container for emojis
   const spanEmoji = document.createElement("span"); // to display one of the below emojis
   const ratings = ["😥", "😌", "😐", "😃", "😎"];
 
-  // Create 1 div for each star and add it to main div
+  // Create 1 span for each star and add it to main div
   // Add 3 listeners - mouseover,mouseout and click for each star
   for (let i = 1; i <= starCount; i++) {
-    const starDiv = document.createElement("div");
-    starDiv.id = i;
-    starDiv.className = "white";
+    const starSpan = document.createElement("span");
+    console.dir(starSpan);
+    starSpan.id = i;
+    starSpan.innerText = "☆";
+    starSpan.style.color = "black";
+    starSpan.style.cursor = "pointer";
+    starSpan.className = "span";
+
     actions.forEach((action) => {
-      starDiv.addEventListener(action, updateState);
+      starSpan.addEventListener(action, updateState);
     });
-    div.appendChild(starDiv);
+    starContainer.appendChild(starSpan);
   }
 
   function updateState(event) {
@@ -28,31 +33,36 @@ window.onload = function () {
   function updateStars(event, activeElementId) {
     if (event.type == "click") clicked = [];
 
-    for (let element of div.children) {
-      const elementId = Number(element.id);
-      switch (event.type) {
-        case "mouseover":
-          elementId <= activeElementId
-            ? (element.className = "yellow")
-            : (element.className = "white");
-          break;
-        case "mouseout":
-          clicked.includes(elementId)
-            ? (element.className = "yellow")
-            : (element.className = "white");
-          break;
-        case "click":
-          elementId <= activeElementId ? clicked.push(elementId) : null;
-          break;
+    for (let starElement of starContainer.children) {
+      const elementId = Number(starElement.id);
+
+      if (event.type == "mouseover") {
+        if (elementId <= activeElementId) {
+          starElement.innerText = "★";
+          starElement.style.color = "yellow";
+        } else {
+          starElement.innerText = "☆";
+          starElement.style.color = "black";
+        }
+      } else if (event.type == "mouseout") {
+        if (clicked.includes(elementId)) {
+          starElement.innerText = "★";
+          starElement.style.color = "yellow";
+        } else {
+          starElement.innerText = "☆";
+          starElement.style.color = "black";
+        }
+      } else if (event.type == "click") {
+        elementId <= activeElementId ? clicked.push(elementId) : null;
       }
     }
   }
 
   function updateEmoji(event, activeElementId) {
     if (event.type == "click") {
-      emojiDiv.removeChild(emojiDiv.firstChild);
+      emojiContainer.removeChild(emojiContainer.firstChild);
       spanEmoji.innerText = ratings[activeElementId - 1];
-      emojiDiv.appendChild(spanEmoji);
+      emojiContainer.appendChild(spanEmoji);
     }
   }
 };
