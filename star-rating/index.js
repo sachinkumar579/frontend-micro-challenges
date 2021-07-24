@@ -12,7 +12,7 @@ window.onload = function () {
   for (let i = 1; i <= starCount; i++) {
     const starSpan = document.createElement("span");
     starSpan.id = i;
-    starSpan.innerText = "☆";
+    starSpan.textContent = "☆";
     starSpan.style.color = "black";
     starSpan.style.cursor = "pointer";
     starSpan.className = "starSpan";
@@ -28,7 +28,8 @@ window.onload = function () {
 
     if (event.type == "click") {
       clicked = [];
-      spanEmoji.innerText = ratings[activeElementId - 1];
+      spanEmoji.textContent =
+        ratings[Math.ceil((activeElementId * 5) / starCount - 1)];
     }
 
     for (let starElement of starContainer.children) {
@@ -36,18 +37,18 @@ window.onload = function () {
 
       if (event.type == "mouseover") {
         if (elementId <= activeElementId) {
-          starElement.innerText = "★";
+          starElement.textContent = "★";
           starElement.style.color = "yellow";
         } else {
-          starElement.innerText = "☆";
+          starElement.textContent = "☆";
           starElement.style.color = "black";
         }
       } else if (event.type == "mouseout") {
         if (clicked.includes(elementId)) {
-          starElement.innerText = "★";
+          starElement.textContent = "★";
           starElement.style.color = "yellow";
         } else {
-          starElement.innerText = "☆";
+          starElement.textContent = "☆";
           starElement.style.color = "black";
         }
       } else if (event.type == "click") {
