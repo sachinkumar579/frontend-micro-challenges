@@ -1,10 +1,10 @@
 window.onload = function () {
   let clicked = []; // To store the button click state. This will be cleared on browser refresh
-  const starCount = 5; // Total stars to be displayed in the UI
+  const starCount = 10; // Total stars to be displayed in the UI
   const actions = ["mouseover", "mouseout", "click"];
   const starContainer = document.getElementById("starContainer");
   const emojiContainer = document.getElementById("emojiContainer");
-  const spanEmoji = document.getElementById("emojiSpan"); // to display one of the below emojis
+  const emoji = document.getElementById("emoji"); // to display one of the below emojis
   const ratings = ["😥", "😌", "😐", "😃", "😎"];
 
   // Create 1 span for each star and add it to main div
@@ -15,7 +15,7 @@ window.onload = function () {
     starSpan.textContent = "☆";
     starSpan.style.color = "black";
     starSpan.style.cursor = "pointer";
-    starSpan.className = "starSpan";
+    starSpan.className = "star";
 
     actions.forEach((action) => {
       starSpan.addEventListener(action, updateState);
@@ -28,7 +28,8 @@ window.onload = function () {
 
     if (event.type == "click") {
       clicked = [];
-      spanEmoji.textContent = ratings[Math.ceil((activeElementId * 5) / starCount - 1)]; // rounds a number to next largest integer
+      emoji.textContent =
+        ratings[Math.ceil((activeElementId * 5) / starCount - 1)]; // rounds a number to next largest integer
     }
 
     for (let starElement of starContainer.children) {
