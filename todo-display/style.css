@@ -1,15 +1,15 @@
-.container-class {
+.container {
   text-align: center;
   margin: auto;
   width: 50%;
 }
-.inner-div-class {
+.todo-item {
   border: 1px solid black;
   margin-bottom: 10px;
   padding: 15px;
 }
 
-.header {
+.title {
   text-align: center;
   margin: auto;
 }

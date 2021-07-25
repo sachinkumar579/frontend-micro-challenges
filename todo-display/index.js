@@ -10,38 +10,37 @@ window.onload = function () {
     "TypeScript",
   ];
 
-  // A main div is used as a container for all individual divs
-  let mainDiv = document.getElementById("container-div");
+  let listContainer = document.getElementById("listContainer");
 
   // Iterating over all TODO list items to create a text node and button
   // within a div. An event listener is attached to the button which
   // will remove the individual div from the main div
   for (let count in todoItems) {
-    let div = createDiv();
-    let txtNode = document.createTextNode(todoItems[count]);
-    let button = createButton(div);
+    let todo = createDiv();
+    let todoItemName = document.createTextNode(todoItems[count]);
+    let button = createButton(todo);
 
-    div.appendChild(txtNode);
-    div.appendChild(button);
-    mainDiv.appendChild(div);
+    todo.appendChild(todoItemName);
+    todo.appendChild(button);
+    listContainer.appendChild(todo);
   }
 
   function createDiv() {
-    let div = document.createElement("div");
-    div.className = "inner-div-class";
-    return div;
+    let todo = document.createElement("div");
+    todo.className = "todo-item";
+    return todo;
   }
 
-  function createButton(div) {
+  function createButton(todo) {
     let button = document.createElement("button");
     button.className = "button";
     button.textContent = "Done";
 
     button.addEventListener("click", function () {
-      mainDiv.removeChild(div);
+      listContainer.removeChild(todo);
 
-      if (mainDiv.childElementCount == 0) {
-        mainDiv.appendChild(document.createTextNode("Ooops! List is empty"));
+      if (listContainer.childElementCount == 0) {
+        document.getElementById("noItems").textContent = "Ooops! List is empty";
       }
     });
     return button;
