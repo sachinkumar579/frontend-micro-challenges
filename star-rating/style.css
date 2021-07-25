@@ -3,7 +3,20 @@
   text-align: center;
 }
 
-.emoji,
-.star {
+.emoji {
   font-size: xx-large;
+}
+
+.star-white::after {
+  font-size: xx-large;
+  content: "☆";
+  color: black;
+  cursor: pointer;
+}
+
+.star-yellow::after {
+  font-size: xx-large;
+  content: "★";
+  color: yellow;
+  cursor: pointer;
 }
