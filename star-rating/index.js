@@ -10,17 +10,17 @@ window.onload = function () {
   // Create 1 span for each star and add it to main div
   // Add 3 listeners - mouseover,mouseout and click for each star
   for (let i = 1; i <= starCount; i++) {
-    const starSpan = document.createElement("span");
-    starSpan.id = i;
-    starSpan.textContent = "☆";
-    starSpan.style.color = "black";
-    starSpan.style.cursor = "pointer";
-    starSpan.className = "star";
+    const star = document.createElement("span");
+    star.id = i;
+    star.textContent = "☆";
+    star.style.color = "black";
+    star.style.cursor = "pointer";
+    star.className = "star";
 
     actions.forEach((action) => {
-      starSpan.addEventListener(action, updateState);
+      star.addEventListener(action, updateState);
     });
-    starContainer.appendChild(starSpan);
+    starContainer.appendChild(star);
   }
 
   function updateState(event) {
