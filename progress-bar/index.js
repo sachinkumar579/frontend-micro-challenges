@@ -14,8 +14,7 @@ function updateProgressBar(event, updateBar) {
   if (click == 1 || updateBar) {
     for (let i = 0; i <= totalTime; i++) {
       function repaint() {
-        bar.style =
-          "width:" + (i / totalTime) * barWidth + "px; background-color: blue";
+        bar.style = "width:" + (i / totalTime) * barWidth + "px; background-color: blue";
         if (i >= totalTime) {
           click > 1 ? updateProgressBar(null, true) : reset();
         }
