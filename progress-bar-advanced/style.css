@@ -1,0 +1,22 @@
+.container {
+  margin: auto;
+  width: 50%;
+}
+
+.bar {
+  text-align: center;
+  width: 800px;
+  height: 30px;
+}
+
+.container-bar {
+  text-align: center;
+  width: 800px;
+  height: 30px;
+  background-color: #eee;
+}
+
+.button {
+  border-color: red;
+  border-radius: 4px;
+}
