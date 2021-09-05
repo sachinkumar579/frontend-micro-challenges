@@ -12,4 +12,4 @@
 
 ![](./images/ProgressBarAdv.gif)
 
-- Check it out here https://sachinkumar579.github.io/frontend-micro-challenges/progress-bar-advanced/
+- Check it out here [Click here](https://sachinkumar579.github.io/frontend-micro-challenges/progress-bar-advanced/)
