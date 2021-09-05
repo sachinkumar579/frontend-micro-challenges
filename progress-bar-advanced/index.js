@@ -8,6 +8,8 @@ let stoppedWidth = 0;
 let time = 0;
 let stoppedTime = 0;
 
+// Has all the logic to increment the loading bar width while applying red background color and reset when it has finished loading 
+// The enclosing container "containerBar" background colour will always be gray 
 function updateProgressBar(event, updateBar) {
   stop = false;
   if (bar.clientWidth < barWidth) {
@@ -29,6 +31,7 @@ function updateProgressBar(event, updateBar) {
   }
 }
 
+// Time interval for which setTimeOut method should be called 
 function splitTime(i) {
   if (stoppedWidth == 0) {
     time = (i / barWidth) * 5000;
@@ -40,6 +43,7 @@ function splitTime(i) {
   return time;
 }
 
+// This is reset when it has finished loading for 5 secs 
 function reset() {
   bar.style.backgroundColor = "#eee";
   button.textContent = "Run";
@@ -49,6 +53,9 @@ function reset() {
   time = 0;
 }
 
+// This is to stop the loading . This indicator will be used in setTimeOut calls to check if the loading should be stopped 
 function stopBar() {
   stop = true;
 }
+
+// I don't even know how it works at this point 
