@@ -25,7 +25,7 @@ function updateProgressBar(event, updateBar) {
 }
 
 function reset() {
-  bar.style.backgroundColor = "gray";
+  bar.style.backgroundColor = "#eee";
   button.textContent = "Run";
   click = 0;
 }
