@@ -1,0 +1,13 @@
+.box {
+  display: inline-block;
+  border: 1px solid black;
+  vertical-align: middle;
+  width: 100px;
+  height: 60px;
+  background-color: gray;
+  cursor: pointer;
+}
+
+.button {
+  cursor: pointer;
+}
