@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw Lines</title>
+</head>
+<body>
+   
+    <canvas id="canvas" width="600" height="600" style="border:1px solid #d3d3d3"> </canvas>
+     
+    <div id="distance">
+       
+    </div>
+</body>
+
+<script>
+
+    let c = document.getElementById("canvas");
+    let ctx = c.getContext("2d");
+    let distance =document.getElementById('distance')
+
+    c.addEventListener('mousemove' , (event) =>{
+      //ctx.clearRect(0, 0, c.width, c.height);
+        
+        let num1 = 255*Math.random()
+        let num2 = 255*Math.random()
+        let num3 = 255*Math.random()
+
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(event.clientX, event.clientY);
+        let col ="rgb("+num1+","+num2+","+num3+")";
+        ctx.strokeStyle = col;
+        ctx.stroke();
+
+        const dist = Math.round(Math.sqrt(Math.pow(event.clientX,2)+Math.pow(event.clientY,2)))
+        distance.textContent = dist+"px"
+    })
+    
+</script>
+
+</body>
+</html>
+
+
+    </script>
+   
+
+</html>
