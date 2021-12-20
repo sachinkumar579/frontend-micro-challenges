@@ -13,3 +13,5 @@
 ![](./images/ProgressBarAdv.gif)
 
 - Check it out here [Click here](https://sachinkumar579.github.io/frontend-micro-challenges/progress-bar-advanced/)
+
+- [All challenges](https://sachinkumar579.github.io/frontend-micro-challenges/)
