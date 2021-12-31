@@ -2,7 +2,8 @@
 
 - All projects are available here https://sachinkumar579.github.io/frontend-micro-challenges/
 
-> Progress Bar Advanced
+
+> Demo of 1 such project - Progress Bar Advanced
 
 - This is a progress bar created using HTML , Javascript and CSS
 - It has a loading bar , 2 buttons and a display section for time
