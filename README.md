@@ -1,7 +1,6 @@
 # frontend-micro-challenges
 
-- All projects are available here https://sachinkumar579.github.io/frontend-micro-challenges/
-
+- [All challenges](https://sachinkumar579.github.io/frontend-micro-challenges/)
 
 > Demo of 1 such project - Progress Bar Advanced
 
@@ -16,5 +15,3 @@
 ![](./images/ProgressBarAdv.gif)
 
 - Check it out here [Click here](https://sachinkumar579.github.io/frontend-micro-challenges/progress-bar-advanced/)
-
-- [All challenges](https://sachinkumar579.github.io/frontend-micro-challenges/)
