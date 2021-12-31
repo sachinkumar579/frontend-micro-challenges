@@ -1,0 +1,82 @@
+.pointers {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.pointer {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.pointer-name {
+  font-size: x-large;
+  background-color: yellow;
+  width: 70px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+.pointer-value {
+  font-size: x-large;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.array-elements {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.array-index {
+  display: flex;
+  margin-left: 10px;
+}
+
+.array-text {
+  width: 630px;
+  font-size: x-large;
+  margin-left: 10px;
+}
+
+.search-key-text {
+  width: 60px;
+  font-size: x-large;
+}
+
+.box {
+  width: 70px;
+  height: 70px;
+  background-color: red;
+  border: 1px solid black;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.box-index-active {
+  width: 70px;
+  height: 35px;
+  background-color: yellow;
+  border: 1px solid black;
+  text-align: center;
+  font-size: x-large;
+}
+
+.box-index {
+  width: 70px;
+  height: 35px;
+  background-color: white;
+  border: 1px solid black;
+  text-align: center;
+  font-size: x-large;
+}
+
+.next-button {
+  background-color: rgb(99, 99, 204);
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 3px;
+  font-size: xx-large;
+}
