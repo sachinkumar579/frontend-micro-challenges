@@ -12,6 +12,6 @@
 
 > Progress Bar Advanced Demo
 
-![](./images/ProgressBarAdv.gif)
+![](./challenges/images/ProgressBarAdv.gif)
 
 - Check it out here [Click here](https://sachinkumar579.github.io/frontend-micro-challenges/progress-bar-advanced/)
