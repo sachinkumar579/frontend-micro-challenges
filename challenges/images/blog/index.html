@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Title</title>
+    <style>
+        .header{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+        }
+        .header p{
+            font-size: 20px;
+            font-family: "Roboto", Helvetica, Arial, sans-serif;
+            color: green;
+            font-weight: bold;
+            cursor: pointer;   
+        }
+        .header a:hover{
+            border-bottom: 5px solid green;
+            padding-bottom: 10px;
+        }
+        .header nav ul {
+            display: flex;
+            justify-content: center;
+        }
+        .header nav li{
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-right: 10px;
+            margin-left: 20px;
+            list-style: none;
+            display: inline;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .header a{
+            text-decoration: none;
+            color: green;
+        }          
+        .main{
+            padding: 20px 20px 0px 20px;
+            border-right: 1px solid #ccc
+        }
+        .main img{
+           display: block;
+           max-width: 100%;
+           margin: auto;
+           border-radius: 5px;
+           margin-top: 10px;
+        }
+        .main h1{
+           font-weight: normal;
+           font-family: "Roboto", Helvetica, Arial, sans-serif;
+        } 
+        .main h2{
+           font-size: 25px;
+           font-weight: normal;
+           font-family: "Roboto", Helvetica, Arial, sans-serif;
+        }
+        .main h5 , .aside h5 {
+           margin-top: 20px;
+           font-size: 20px;
+           font-weight: bold;
+           font-family: "Roboto", Helvetica, Arial, sans-serif;
+           margin-bottom: 1px;
+        }
+        .main table {
+        margin-bottom: 20px;
+        width: 100%;
+        border: 1px solid #e5e5e5;
+        border-collapse: collapse;
+        }
+        .main tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {
+         background-color: #f9f9f9;
+        }
+        .main td, th {
+         padding: 10px 10px;
+         border: 1px solid #e5e5e5;
+         font-size: 20px;
+        }        
+        .content {
+          display: grid;
+          grid-template-columns: auto 486px;
+          grid-column-gap: 0px;
+        }
+        .aside{
+           padding : 15px 0px 4px 20px
+        }
+        .aside a{
+           text-decoration: none;
+           color: green;
+        }
+        .aside ul {
+        list-style: none;
+        padding-left: 0;
+        }
+        .div1,.div2,.div3,.div4{
+           border-bottom: 3px solid #02781c63;
+           padding-bottom: 30px
+        }
+        .div1 p,.div2 p,.div3 p,.div4 p,.div5 p,.main p{
+           font-size: 18px;
+           font-family: "Roboto", Helvetica, Arial, sans-serif;
+           margin-top: 10px;
+           line-height: 1.6;
+        }
+        .div1 button {
+           background-color: white;
+           border: none;
+           color: black;
+           padding: 11px 32px;
+           text-align: center;
+           text-decoration: none;
+           display: inline-block;
+           font-size: 16px;
+           margin: 4px 2px;
+           transition-duration: 0.4s;
+           cursor: pointer;
+           border: 2px solid #4CAF50;
+           border-radius: 3px;
+        }
+        .div1 button:hover {
+           background-color: #4CAF50;
+           color: white;
+           border-radius: 3px;
+        }
+        .aside small{
+           font-size: 75%;
+           color: #999;
+        }
+        .footer{
+           text-align: center;
+           border-top: 1px solid #ccc 
+        }
+        .footer div{
+           display: flex;
+           justify-content: center;
+        }
+        .footer div a{
+        text-decoration: none;
+        padding: 10px 10px;
+        color:green;
+        }
+        .pt-small {
+          padding-top: 10px;
+        }
+        .text-small {
+        font-size: 15px;
+        }      
+        hr{
+           border-top: 1px solid #eee;
+           border-bottom: 1px solid #fff;
+        }
+</style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="title"> <p>MAIN TITLE</p></div>
+        <nav>
+            <ul>
+            <li><a href="blog.html">NAV 1</a></li>
+            <li><a href="blog.html">NAV 2</a></li>
+            <li><a href="blog.html">NAV 3</a></li>
+            <li><a href="blog.html">NAV 4</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <main class="main">
+           <h1>Main Article Number One Header 1</h1>
+           <p> Some random text goes here Some random text goes here Some random text goes here Some random text goes here
+            Some random text goes here Some random text goes here Some random text goes here Some random text goes here
+            Some random text goes here Some random text goes here Some random text goes here Some random text goes here
+            Some random text goes here Some random text goes here Some random text goes here Some random text goes here
+            Some random text goes here Some random text goes here
+            <img src="javascript.jpg"> 
+            </p>
+            <hr> 
+            <h2>Main Article Number One Header 2</h2> 
+            <p> Some random text goes here Some random text goes here Some random text goes here Some random text goes here
+                Some random text goes here Some random text goes here Some random text goes here Some random text goes here
+                Some random text goes here Some random text goes here Some random text goes here Some random text goes here
+            </p>
+
+            <h2>Main Article Number One Header 3</h2>
+            <table>
+                <tbody>
+                    <tr><td>Language</td><td>Points</td></tr>
+                    <tr><td>Java</td><td>123</td></tr>
+                    <tr><td>Javascript</td><td>12</td></tr>
+                    <tr><td>HTML</td><td>120</td></tr>
+                    <tr><td>CSS</td><td>30</td></tr>
+                    <tr><td>Rust</td><td>20</td></tr>
+                    <tr><td>Go</td><td>190</td></tr>
+                    <tr><td>Php</td><td>10</td></tr>
+                </tbody>
+            </table>
+        </main>
+        <aside class="aside">
+            <section>
+                <div class="div1">
+                    <h5>Aside Div 1</h5> 
+                    <p>Some random text goes here Some random text goes here Some random text goes here Some random text goes here </p>
+                    <button>BUTTON</button>
+                </div>
+                <div class="div2">
+                    <h5>Aside Div 2</h5> 
+                    <p> Some random text goes here Some random text goes here Some random text goes here Some random text goes here
+                        Some random text goes here Some random text goes here Some random text goes here Some random text goes here
+                        Some random text goes here Some random text goes here Some random text goes here
+                        
+                    </p>
+                </div>
+                <div class="div3">
+                    <h5>Aside Div 3</h5> 
+                    <p> Some random text goes here Some random text goes here Some random text goes here Some random text goes here
+                        Some random text goes here Some random text goes here Some random text goes here Some random text goes here
+                        Some random text goes here Some random text goes here Some random text goes here
+                        
+                    </p>
+                </div>
+                <div class="div4">
+                    <h5>Aside Div 4</h5> 
+                    <p> Some random text goes here Some random text goes here Some random text goes here Some random text goes here
+                        Some random text goes here Some random text goes here Some random text goes here Some random text goes here
+                        Some random text goes here Some random text goes here Some random text goes here
+                        
+                    </p>
+                </div>
+                <div class="div5">
+                    <h5>Aside Div 5</h5> 
+                    <ul>
+                        <li><p><a href="blog.html">Link 1 for a post</a> <small>31 Dec 2021</small></p></li>
+                        <li><p><a href="blog.html">Link 2 for a post</a> <small>15 Jul 2021</small></p></li>
+                        <li><p><a href="blog.html">Link 3 for a post</a> <small>01 Jan 2021</small></p></li>
+                    </ul>
+                </div>
+            </section>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="text-small pt-small">
+        <a href="">Footer 1</a>
+        <a href="">Footer 2</a>
+        <a href="">Footer 3</a>
+        <a href="">Footer 4</a>
+        <a href="">Footer 5</a>
+        <a href="">Footer 6</a>
+        <a href="">Footer 7</a>
+        </div>
+        <p class="text-small"> Copyright @ 2021 Title . All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
