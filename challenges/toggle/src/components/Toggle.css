@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 23px 15px;
+}
+
+.toggle-container {
+  display: flex;
+  flex-direction: column;
+  padding: 23px 15px;
+}
+
+.names {
+  padding: 38px 15px;
+}
+
+.outer-box {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  background-color: grey;
+  border-radius: 40px;
+  padding: 1px 1px;
+}
+
+.box1 {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.box2 {
+  width: 50px;
+  height: 50px;
+  background-color: grey;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.green-toggle-box {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  background-color: rgb(161, 148, 148);
+  border-radius: 40px;
+  padding: 1px 1px;
+}
+
+.green-toggle-box1 {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(161, 148, 148);
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.green-toggle-box2 {
+  width: 50px;
+  height: 50px;
+  background-color: green;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.blue-toggle-box {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  background-color: rgb(161, 148, 148);
+  border-radius: 40px;
+  padding: 1px 1px;
+}
+
+.blue-toggle-box1 {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(161, 148, 148);
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.blue-toggle-box2 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.red-toggle-box {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  background-color: rgb(161, 148, 148);
+  border-radius: 40px;
+  padding: 1px 1px;
+}
+
+.red-toggle-box1 {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(161, 148, 148);
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.red-toggle-box2 {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  cursor: pointer;
+  border-radius: 40px;
+}
