@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+     body{
+       margin: 0px;
+     }
+    .container-black{
+      height: 100vh;
+      overflow: auto;
+      background-color: black;
+      color: white;
+    } 
+
+    .container-white{
+      background-color: white;
+      color: black;
+    }
+
+    .content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    .css-content{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .css-display{
+      border: 1px solid blue;
+    }
+
+    .css-display-black{
+      border: 3px solid blue;
+      background-color: black;
+      color: white;
+    }
+
+    .css-display-white{
+      border: 1px solid blue;
+      background-color: white;
+      color: black;
+    }
+
+    input[type="checkbox"] + label{
+      border: 3px solid blue;
+      background-color: white;
+      color: black;
+    }
+
+
+    input[type="checkbox"]:checked+label{
+      border: 3px solid blue;
+      background-color: black;
+      color: white;
+    }     
+  </style>
+
+  <title>Light and Dark mode</title>
+
+
+</head>
+
+<body>
+  <div id="container">
+  <div><span>Dark mode:</span> <input id="checkbox1" type="checkbox" onclick="checkbox1Handler()"/> </div>
+
+  <div id="content" class="content">
+  <p>The entire page color theme is controlled using CSS and Javascript</p>
+  <div class="css-content">
+  <span>Contained dark mode: </span><input id="checkbox2" type="checkbox" name="checkbox2" />
+  <label id="css-display" class="css-display" for="checkbox2">The container color scheme is controlled by only CSS</label>
+  </div>
+  </div>
+
+  </div>
+</body>
+
+<script>
+
+   function checkbox1Handler(){
+     let checkbox1= document.getElementById('checkbox1')
+     let checkbox2= document.getElementById('checkbox2')
+     let container = document.getElementById('container')
+     let cssDisplay = document.getElementById('css-display')
+
+     if(checkbox1.checked)
+     {
+       container.className='container-black'
+       cssDisplay.className='css-display-black'
+       checkbox2.checked= true
+     }
+     else {
+     container.className='container-white'
+     cssDisplay.className='css-display-white'
+     checkbox2.checked= false
+     } 
+    }
+    
+</script>
+
+</html>
