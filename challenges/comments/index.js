@@ -26,18 +26,8 @@ function replyHandler() {
     cancelBtn.textContent = "Cancel";
     cancelBtn.addEventListener("click", cancelHandler);
 
-    postBtnsContainer = appendChildElements(
-      postBtnsContainer,
-      postBtn,
-      cancelBtn
-    );
-
-    box = appendChildElements(
-      box,
-      nameInpContainer,
-      commentInpContainer,
-      postBtnsContainer
-    );
+    postBtnsContainer = appendChildElements( postBtnsContainer, postBtn, cancelBtn );
+    box = appendChildElements( box, nameInpContainer, commentInpContainer, postBtnsContainer );
 
     container.appendChild(box);
 
@@ -84,10 +74,8 @@ function replyHandler() {
             replyBtn.disabled = true;
             deleteBtn.disabled = true;
             editBtn.textContent = "Save";
-          } else if (
-            editBtn.textContent === "Save" &&
-            box.childNodes[1].firstChild.value !== ""
-          ) {
+          } else if ( editBtn.textContent === "Save" && box.childNodes[1].firstChild.value !== "") 
+          {
             const commentInp = document.createElement("div");
             commentInp.textContent = box.childNodes[1].firstChild.value;
             commentInpContainer.firstElementChild.remove();
@@ -97,28 +85,11 @@ function replyHandler() {
             deleteBtn.disabled = false;
             editBtn.textContent = "Edit";
           }
-          box = appendChildElements(
-            box,
-            nameInpContainer,
-            commentInpContainer,
-            postBtnsContainer
-          );
+          box = appendChildElements( box, nameInpContainer, commentInpContainer, postBtnsContainer);
         }
 
-        postBtnsContainer = appendChildElements(
-          postBtnsContainer,
-          replyBtn,
-          editBtn,
-          deleteBtn
-        );
-
-        box = appendChildElements(
-          box,
-          nameInpContainer,
-          commentInpContainer,
-          postBtnsContainer
-        );
-
+        postBtnsContainer = appendChildElements( postBtnsContainer, replyBtn, editBtn, deleteBtn);
+        box = appendChildElements( box, nameInpContainer, commentInpContainer, postBtnsContainer);
         container.appendChild(box);
       }
     }
