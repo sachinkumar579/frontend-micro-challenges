@@ -97,10 +97,7 @@ function replyHandler() {
 }
 
 function appendChildElements(parent, ...childElements) {
-  childElements.forEach((ele) => {
-    parent.appendChild(ele);
-  });
-
+  childElements.forEach(ele => parent.appendChild(ele));
   return parent;
 }
 
