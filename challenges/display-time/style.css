@@ -2,10 +2,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 10vw;
+  font-size: 20px;
 }
 
 .container {
+  width: 150px;
   display: flex;
   flex-direction: row;
 }
@@ -20,19 +21,18 @@ body {
   margin-top: 50px;
 }
 
-.separator {
-  margin-top: 45px;
-}
-
 .hours,
 .minutes,
 .seconds {
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
-  height: 150px;
+  height: 110px;
 }
 
+.separator {
+  margin-top: 32%;
+}
 .move-prev {
   animation-duration: 1s;
   animation-name: moveprev;
@@ -52,7 +52,7 @@ body {
   }
 
   100% {
-    margin-top: 0px;
+    margin-top: 20px;
     opacity: 0.1;
   }
 }
@@ -62,7 +62,7 @@ body {
   50%,
   75%,
   90% {
-    margin-top: 100px;
+    margin-top: 80px;
     opacity: 0.1;
   }
 
