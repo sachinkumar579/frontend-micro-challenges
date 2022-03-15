@@ -10,9 +10,12 @@ setInterval(() => {
 
 function updateSeconds() {
   const secs = new Date().getSeconds();
-  document.getElementById("seconds-prev").remove();
-  document.getElementById("seconds-next").remove();
 
+  if (document.getElementById("seconds-cont"))
+    document.getElementById("seconds-cont").remove();
+
+  const secondsCont = document.createElement("div");
+  secondsCont.id = "seconds-cont";
   const secondsSecond = document.createElement("div");
   const secondsFirst = document.createElement("div");
 
@@ -25,8 +28,9 @@ function updateSeconds() {
   secondsSecond.textContent = secs < 10 ? "0" + secs : secs;
   secondsSecond.className = "move-next";
 
-  document.getElementById("seconds").appendChild(secondsFirst);
-  document.getElementById("seconds").appendChild(secondsSecond);
+  secondsCont.appendChild(secondsFirst);
+  secondsCont.appendChild(secondsSecond);
+  document.getElementById("seconds").appendChild(secondsCont);
 }
 
 function updateMinutes() {
@@ -34,7 +38,8 @@ function updateMinutes() {
   const mins = date.getMinutes();
 
   if (date.getSeconds() == 0) {
-    document.getElementById("minutes-fixed").remove();
+    if (document.getElementById("minutes-fixed"))
+      document.getElementById("minutes-fixed").remove();
     const minutesFirst = document.createElement("div");
     const minutesSecond = document.createElement("div");
 
@@ -72,7 +77,8 @@ function updateHours() {
   const hours = date.getHours();
 
   if (date.getSeconds() == 0 && date.getMinutes() == 0) {
-    document.getElementById("hours-fixed").remove();
+    if (document.getElementById("hours-fixed"))
+      document.getElementById("hours-fixed").remove();
     const hoursFirst = document.createElement("div");
     const hoursSecond = document.createElement("div");
 
@@ -90,7 +96,10 @@ function updateHours() {
   } else {
     if (document.getElementById("hours-fixed")) {
       document.getElementById("hours-fixed").remove();
-    } else {
+    } else if (
+      document.getElementById("hours-prev") &&
+      document.getElementById("hours-next")
+    ) {
       document.getElementById("hours-prev").remove();
       document.getElementById("hours-next").remove();
     }
