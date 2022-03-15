@@ -1,15 +1,17 @@
-updateSeconds();
-updateMinutes();
-updateHours();
+const date = new Date();
+updateSeconds(date);
+updateMinutes(date);
+updateHours(date);
 
 setInterval(() => {
-  updateSeconds();
-  updateMinutes();
-  updateHours();
+  const date = new Date();
+  updateSeconds(date);
+  updateMinutes(date);
+  updateHours(date);
 }, 1000);
 
-function updateSeconds() {
-  const secs = new Date().getSeconds();
+function updateSeconds(date) {
+  const secs = date.getSeconds();
 
   if (document.getElementById("seconds-prev"))
     document.getElementById("seconds-prev").remove();
@@ -32,8 +34,7 @@ function updateSeconds() {
   document.getElementById("seconds").appendChild(secondsSecond);
 }
 
-function updateMinutes() {
-  const date = new Date();
+function updateMinutes(date) {
   const mins = date.getMinutes();
 
   if (date.getSeconds() == 0) {
@@ -71,8 +72,7 @@ function updateMinutes() {
   }
 }
 
-function updateHours() {
-  const date = new Date();
+function updateHours(date) {
   const hours = date.getHours();
 
   if (date.getSeconds() == 0 && date.getMinutes() == 0) {
