@@ -2,7 +2,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
 }
 
 .container {
@@ -17,11 +16,11 @@ body {
 
 .hours-fixed,
 .minutes-fixed {
-  margin-top: 50px;
+  margin-top: 50%;
 }
 
 .separator {
-  margin-top: 50px;
+  margin-top: 8%;
 }
 
 .hours,
@@ -29,7 +28,7 @@ body {
 .seconds {
   font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
-  height: 130px;
+  height: 60px;
 }
 
 .move-prev {
@@ -46,12 +45,12 @@ body {
   0%,
   50%,
   75% {
-    margin-top: 50px;
+    margin-top: 50%;
     opacity: 1;
   }
 
   100% {
-    margin-top: -10px;
+    margin-top: -10%;
     opacity: 0.1;
   }
 }
@@ -61,12 +60,12 @@ body {
   50%,
   75%,
   90% {
-    margin-top: 150px;
+    margin-top: 150%;
     opacity: 0.1;
   }
 
   100% {
-    margin-top: 50px;
+    margin-top: 50%;
     opacity: 0.5;
   }
 }

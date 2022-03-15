@@ -1,44 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Micro Challenges</title>
+    <title>Display Time</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
   </head>
-
   <body>
-    <div class="container">
-      <h1><u>Frontend Micro Challenges</u></h1>
-      <main>
-        <div><a href="./challenges/todo-display/">Todo app (display)</a></div>
-        <div><a href="./challenges/star-rating/">Star Rating (display)</a></div>
-        <div><a href="./challenges/progress-bar/">Progress Bar</a></div>
-        <div>
-          <a href="./challenges/progress-bar-advanced/"
-            >Progress Bar Advanced</a
-          >
-        </div>
-        <div><a href="./challenges/memory-game/">Memory Game</a></div>
-        <div><a href="./challenges/blog/">Blogging</a></div>
-        <div><a href="./challenges/responsive-login/">Responsive Login</a></div>
-        <div>
-          <a href="./challenges/darkandlightmode/">Dark and Light mode</a>
-        </div>
-        <div>
-          <a href="./challenges/comments/">Comment Box</a>
-        </div>
-        <div>
-          <a href="./challenges/viewport/with/">With View port</a>
-        </div>
+    <div class="container" id="container">
+      <div id="hours" class="hours"></div>
+      <div class="separator">:</div>
 
-        <div>
-          <a href="./challenges/viewport/without/">Without View port</a>
-        </div>
-        <div>
-          <a href="./challenges/display-time/">Display Time</a>
-        </div>
-      </main>
+      <div id="minutes" class="minutes"></div>
+      <div class="separator">:</div>
+
+      <div id="seconds" class="seconds"></div>
     </div>
   </body>
 </html>
