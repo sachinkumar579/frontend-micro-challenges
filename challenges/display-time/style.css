@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 10vw;
 }
 
 .container {
@@ -30,7 +30,7 @@ body {
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
-  height: 100px;
+  height: 150px;
 }
 
 .move-prev {
