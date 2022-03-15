@@ -11,11 +11,11 @@ setInterval(() => {
 function updateSeconds() {
   const secs = new Date().getSeconds();
 
-  if (document.getElementById("seconds-cont"))
-    document.getElementById("seconds-cont").remove();
+  if (document.getElementById("seconds-prev"))
+    document.getElementById("seconds-prev").remove();
+  if (document.getElementById("seconds-next"))
+    document.getElementById("seconds-next").remove();
 
-  const secondsCont = document.createElement("div");
-  secondsCont.id = "seconds-cont";
   const secondsSecond = document.createElement("div");
   const secondsFirst = document.createElement("div");
 
@@ -28,9 +28,8 @@ function updateSeconds() {
   secondsSecond.textContent = secs < 10 ? "0" + secs : secs;
   secondsSecond.className = "move-next";
 
-  secondsCont.appendChild(secondsFirst);
-  secondsCont.appendChild(secondsSecond);
-  document.getElementById("seconds").appendChild(secondsCont);
+  document.getElementById("seconds").appendChild(secondsFirst);
+  document.getElementById("seconds").appendChild(secondsSecond);
 }
 
 function updateMinutes() {
