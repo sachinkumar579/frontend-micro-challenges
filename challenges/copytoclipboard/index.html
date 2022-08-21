@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title></title>
+  </head>
+  <body>
+  
+      <button id="button1" type="button">Hello1</button>
+      <button id="button2" type="button">Hello2</button>
+      <button id="button3" type="button">Hello3</button>
+      <button id="button4" type="button">Hello4</button>
+      <button id="button5" type="button">Hello5</button>
+  <!----To make a new entry,Add a new button here with the value.Then increment button id -->                      
+  </body>
+  
+  
+  <script>
+  
+    function copyText(e){
+        e.preventDefault()
+        console.log('copied',e.target.textContent);
+        navigator.clipboard.writeText(e.target.textContent);
+    }
+    
+    document.getElementById("button1").addEventListener('click',copyText)
+    document.getElementById("button2").addEventListener('click',copyText)
+    document.getElementById("button3").addEventListener('click',copyText)
+    document.getElementById("button4").addEventListener('click',copyText)
+    document.getElementById("button5").addEventListener('click',copyText) 
+    
+    <!-- Copy paste above line and increment the button id-->
+  </script>
+</html>
+
